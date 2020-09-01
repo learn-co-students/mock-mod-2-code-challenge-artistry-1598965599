@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get '/artists/:id', to: 'artists#show', as: 'artist'
 
   get '/artist_instruments/new', to: 'artist_instruments#new', as: 'new_artist_instrument'
-
   post '/artist_instruments', to: 'artist_instruments#create'
 
 end

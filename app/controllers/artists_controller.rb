@@ -9,9 +9,11 @@ class ArtistsController < ApplicationController
     end
 
     def create
+        # byebug
         @artist = Artist.new(artist_params)
+        
         if @artist.save
-            redirect_to artist_path(@artist.artist_id)
+            redirect_to artist_path(@artist)
         else
             render 'new'
         end
@@ -24,7 +26,7 @@ class ArtistsController < ApplicationController
     private
 
     def artist_params
-        params.require(:artist).permit(:name, :title)
+        params.require(:artist).permit(:name, :age, :title)
     end
 
     

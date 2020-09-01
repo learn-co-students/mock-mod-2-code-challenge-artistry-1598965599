@@ -1,0 +1,7 @@
+<h3>Sign Up Form<h3>
+
+<%= form_for @signup do |f|%>
+<%= f.collection_select :artist_id, Artist.all, :id, :name%>
+<%= f.collection_select :instrument_id, Instrument.all, :id, :name%>
+<%= f.submit "Submit"%>
+<%end%>

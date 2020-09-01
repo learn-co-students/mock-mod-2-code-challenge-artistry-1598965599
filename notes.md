@@ -1,4 +1,4 @@
-How to solve the mock code challenge
+# How to solve the mock code challenge
 
 # Getting started
 1. Run `rails db:migrate` and then `rails db:seed`.

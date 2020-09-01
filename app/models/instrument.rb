@@ -1,3 +1,4 @@
 class Instrument < ApplicationRecord
-    has_and_belongs_to_many :artists
+    has_many :talents
+    has_many :instruments, through: :talents
 end

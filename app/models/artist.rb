@@ -1,3 +1,6 @@
 class Artist < ApplicationRecord
-    has_and_belongs_to_many :instruments 
+    has_many :talents
+    has_many :instruments, through: :talents
+    validates :name, presence: true
+    validates :title, uniqueness: true
 end

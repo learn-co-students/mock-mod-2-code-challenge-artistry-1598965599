@@ -1,7 +1,12 @@
+<h1>Create an Artist</h1>
+<hr>
+
 <%= form_for @artist do |f|%>
-<%=f.label "Artist" %>
-<%=f.text_field :name %>
-<%=f.label "Instrument" %>
-<%=f.collection_select :instrument_ids, Instrument.all, :id, :name %>
-<%=f.submit "Submit" %>
-<% end %>
+    <%=f.label "Name" %><br>
+    <%=f.text_field :name %><br>
+    <%=f.label "Age" %><br>
+    <%=f.number_field :age %><br>
+    <%=f.label "Title" %><br>
+    <%=f.text_field :title %><br>
+    <%=f.submit "Submit" %><br>
+    <% end %>

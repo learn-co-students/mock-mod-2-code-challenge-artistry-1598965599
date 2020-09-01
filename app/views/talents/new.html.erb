@@ -1,0 +1,11 @@
+<h1> Create a talent</h1>
+
+<hr><br>
+
+<%= form_for @talent do |f|%>
+    <%=f.label "Artist" %>
+    <%=f.collection_select :artist_id, Artist.all, :id, :name %>
+    <%=f.label "Instrument" %>
+    <%=f.collection_select :instrument_id, Instrument.all, :id, :name %>
+    <%=f.submit "Submit" %>
+    <% end %>

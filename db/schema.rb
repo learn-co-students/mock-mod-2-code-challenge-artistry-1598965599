@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_135136) do
+ActiveRecord::Schema.define(version: 2020_09_01_192319) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
@@ -20,13 +20,6 @@ ActiveRecord::Schema.define(version: 2020_09_01_135136) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "artists_instruments", id: false, force: :cascade do |t|
-    t.integer "artist_id", null: false
-    t.integer "instrument_id", null: false
-    t.index ["artist_id"], name: "index_artists_instruments_on_artist_id"
-    t.index ["instrument_id"], name: "index_artists_instruments_on_instrument_id"
-  end
-
   create_table "instruments", force: :cascade do |t|
     t.string "name"
     t.string "classification"
@@ -34,4 +27,15 @@ ActiveRecord::Schema.define(version: 2020_09_01_135136) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "talents", force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.integer "instrument_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_talents_on_artist_id"
+    t.index ["instrument_id"], name: "index_talents_on_instrument_id"
+  end
+
+  add_foreign_key "talents", "artists"
+  add_foreign_key "talents", "instruments"
 end

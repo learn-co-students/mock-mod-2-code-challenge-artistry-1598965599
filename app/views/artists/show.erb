@@ -9,6 +9,11 @@
 <p> <%= @artist.name %> is known as <%= @artist.title %>. </p> 
 <p> They are <%= @artist.age %> years old. </p>
 
+<p> They play  <% @artist.instruments.each do |instrument| %> 
+    <li><%= instrument.name%> </li>
+<%end%>
+</p>
+
 
 </div>
 </html>

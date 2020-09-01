@@ -1,6 +1,6 @@
 # How to solve the mock code challenge
 
-# Getting started
+## Getting started
 1. Run `rails db:migrate` and then `rails db:seed`.
 2. Create a new migration table for the joiner model.
 
@@ -13,7 +13,7 @@
 7. Write the appropraite routes for all the models.
 8. Run `rails s` and navigate to `localhost:3000` in your browser to test out your app!
 
-# Let's tackle the deliverables!
+## Let's tackle the deliverables!
 #### 1) As a user, I should be able to fill out a form to connect an artist with an instrument from the database. This form should be made with at least one dropdown. Upon successfully creating the association, I should be redirected to the artist's show page.
 
 This first deliverable is asking us to create a `new.html.erb` view file for the joiner model where we can create a new joiner instance.

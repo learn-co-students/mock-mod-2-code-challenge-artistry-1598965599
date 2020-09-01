@@ -5,16 +5,21 @@ class ArtistsController < ApplicationController
     end
 
     def show
-        @artists = Artist.find(artists[:id])
+        @artist = Artist.find(params[:id])
     end
 
     def new
-        @artists = Artist.new
+        @artist = Artist.new
     end
 
-    # def create({:Artist params[:]})
+    def create
+        @artist = Artist.create(artist_params)
 
-    # end
+        redirect_to artist_path(@artist)
+    end
 
-    
+   private
+   def artist_params
+      params.require(:artist).permit(:name, :age, :title)
+   end 
 end

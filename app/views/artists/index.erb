@@ -1,8 +1,9 @@
 <h1> All the Artists</h1>
 
 <ul>
-<% Artist.all.each do |artists|%>
+<% @artists.map do |artist|%>
        <li>
-       <%= link_to artists.name, artists_path(@artists)%>
-        <%end%></li>
+       <%= link_to artist.name, artist_path(artist.id)%>
+       </li>
+      <%end%>
 </ul>

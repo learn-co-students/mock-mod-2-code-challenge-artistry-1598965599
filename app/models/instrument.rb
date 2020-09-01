@@ -1,3 +1,5 @@
 class Instrument < ApplicationRecord
-    has_many :artisits
+    has_many :artist_instruments
+    has_many :artists, through: :artist_instruments
 end
+

@@ -1,8 +1,18 @@
 <p><strong>Name:</strong>
-<%= @artists.name%></p>
+<%= @artist.name%></p>
 <br>
 <p><strong>Age:</strong>
-<%= @artists.age%></p>
+<%= @artist.age%></p>
 <br>
 <p><strong>Title:</strong>
-<%= @artists.title%></p>
+<%= @artist.title%></p>
+
+<p><strong>Instruments</strong></p>
+<ul>
+<% @artist.instruments.uniq.each do |instrument| %>
+    <li><%= instrument.name%></li>
+
+<%end%>
+
+
+</ul>

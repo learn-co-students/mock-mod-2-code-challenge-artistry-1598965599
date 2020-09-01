@@ -1,8 +1,9 @@
 <h1> All the Instruments </h1>
 
 <ul>
-<% Instrument.all.each do |instruments|%>
+<% @instruments.map do |instruments|%>
        <li>
-       <%= link_to instruments.name, instruments_path(@instruments)%>
-        <%end%></li>
+       <%= link_to instruments.name, instruments_path(instruments)%>
+        </li>
+        <%end%>
 </ul>

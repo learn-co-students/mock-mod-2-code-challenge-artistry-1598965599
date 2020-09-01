@@ -4,7 +4,7 @@
 
 <h3>Instruments: </h3>
 <ul>
-  <% @artist.instruments.map do |instrument| %>
+  <% @artist.instruments.uniq().map do |instrument| %>
     <li> <%= instrument.name %> </li>
   <% end %>
 </ul>

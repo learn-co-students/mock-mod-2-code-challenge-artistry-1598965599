@@ -1,0 +1,7 @@
+<%= form_for @artist do |f|%>
+<%=f.label "Artist" %>
+<%=f.text_field :name %>
+<%=f.label "Instrument" %>
+<%=f.collection_select :instrument_ids, Instrument.all, :id, :name %>
+<%=f.submit "Submit" %>
+<% end %>

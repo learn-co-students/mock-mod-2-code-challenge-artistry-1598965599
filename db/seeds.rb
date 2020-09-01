@@ -1,3 +1,10 @@
+#don't I need to write a pk sequence to destroy
+
+Instrument.destroy_all
+Artist.destroy_all
+
+
+
 Artist.create(name: "Michael Jackson", age: rand(50), title: "King of Pop")
 Artist.create(name: "Stevie Wonder", age: rand(50), title: "Little Stevie Wonder")
 Artist.create(name: "Elvis Presley", age: rand(50), title: "the King")

@@ -11,7 +11,7 @@
 
 <ol >
     <% @artists.each do |artist_element|%><br>
-     <li><%= link_to artist_element.name%></li><br>
+     <li><%= link_to artist_element.name, artist_element%></li><br>
     
     <%end%><br>
 

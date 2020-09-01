@@ -1,1 +1,22 @@
-<h1> All the Instruments </h1>
+<html>
+<body style="background-color:DodgerBlue;">
+<br>
+<h1 style="text-align:center"> Instruments</h1>
+
+<div>
+<br>
+<h3>Click an Instrument for info</h3>
+<% #iterate through the Artist array %>
+<% #display that%>
+
+<ol >
+    <% @instruments.each do |instrument_element|%><br>
+     <li><%= link_to instrument_element.name, instrument_element%></li><br>
+    
+    <%end%><br>
+
+
+</ol>
+</div>
+
+</html>

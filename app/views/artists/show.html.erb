@@ -1,0 +1,16 @@
+<h1>You are in the artist show view</h1>
+
+<div>
+<p>Artist age: <%= @artist.age %><br>
+    Aritst title: <%= @artist.title %><br>
+    Artist name: <%= @artist.name %></p>
+
+    <li>Instruements play<% @artist.instruments.map do |instrument| %><br>
+    <%= instrument.name%>
+    <% end %> </li>
+</div>
+
+<br><br>
+<%= link_to "Create another association", new_studio_path %>
+<br><br>
+<%= link_to "View all Instruments", instruments_path %>

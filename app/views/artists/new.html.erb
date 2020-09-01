@@ -1,0 +1,29 @@
+<h1> You are in the new view for artist</h1>
+
+
+
+
+<%= form_for @artist do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+<%= f.label :age %>
+<%= f.number_field :age %> <br>
+<%= f.label :title %>
+<%= f.text_field :title %> <br>
+<%= f.submit "New Artits" %>
+<% end %>
+
+
+<% if flash[:errors] %>
+    <% flash[:errors].map do |error| %>
+    <%= error %>
+    <% end %>
+<% end %>
+
+
+
+
+
+
+
+

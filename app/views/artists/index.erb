@@ -1,1 +1,11 @@
 <h1> All the Artists</h1>
+
+<% @artists.map do |artist| %>
+<%= link_to artist.name, artist_path(artist) %> <br>
+<% end %>
+
+
+<br><br>
+<h2> Let's create an astist</h2>
+
+<%= link_to "Create Artist", new_artist_path %>

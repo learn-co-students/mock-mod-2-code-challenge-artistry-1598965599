@@ -1,1 +1,6 @@
 <h1> All the Instruments </h1>
+
+<% @instruments.map do |instrument| %>
+Instrument name: <strong><%= instrument.name %></strong><br>
+Instrument classificaton: <strong><%= instrument.classification %></strong> <br><br>
+<% end %>

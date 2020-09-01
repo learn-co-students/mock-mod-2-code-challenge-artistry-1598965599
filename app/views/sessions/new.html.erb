@@ -1,0 +1,16 @@
+<h1>Create a new session!</h1>
+
+<%= form_for(@session) do |f| %>
+  <label>Pick an artist</label><br>
+  <%= f.collection_select :artist_id, Artist.all, :id, :name %><br>
+  <% # collection_select(object, method, collection, value_method, text_method) %>
+  
+  <br>
+  
+  <label>Pick an instrument</label><br>
+  <%= f.collection_select :instrument_id, Instrument.all, :id, :name %><br>
+
+  <br>
+  
+  <%= f.submit %>
+<% end %>

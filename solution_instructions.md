@@ -40,10 +40,19 @@ This second deliverable is more straightforward. It's asking us to populate the 
 
 #### 3) On the index page for an artist, there should be a list of all the artists' names. Clicking on one artist's name should take me to that artist's show page.
 
+* In `app > views > artists > index.html.erb`, iterate through all the artists and return their names. Use `link_to` to create a link for each artist's name that leads to their specific show page.
+
 ---
 
 #### 4) There should be an index page for all the instruments, where the name of all the instruments should be listed out, alongside each of their classifications.
 
+* In `app > views > instruments > index.html.erb`, iterate through all the instruments and return their names and classifications.
+
 ---
 
 #### 5) I should also be able to save a new artist into the database. While it's possible for an artist to have the same name, an artist must have a name. An artist must also have an unique title. After successfully creating an artist, I should be taken to the artist's show page.
+
+* Write the `new` and `create` methods for the artists controller. Use `redirect_to` inside the `create` method to redirect the user to the artist's show page after successfully creating a new artist.
+* Check your routes and make sure the `get` request for `artists#new` exists, as well as the `post` request for `artists#create`.
+* Write the `:name` and `:title` validations inside the Artist model. The `:name` attribute's presence must be true, and the `:title` attribute's uniqueness must be true.
+* In `app > views > artists`, create a new file called `new.html.erb`. Write a `form_for` using the angry squid `<&=` tags.

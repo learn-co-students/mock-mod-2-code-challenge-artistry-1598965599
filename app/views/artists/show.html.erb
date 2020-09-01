@@ -3,8 +3,14 @@
 <h3>Age: <%= @artist.age %></h3>
 
 <h3>Instruments: </h3>
-<ul>
-  <% @artist.instruments.uniq().map do |instrument| %>
-    <li> <%= instrument.name %> </li>
-  <% end %>
-</ul>
+
+<% if @artist.instruments.length < 1 %>
+  <p><%= "This artist hasn't played any instruments yet!" %></p>
+
+<% else %>
+  <ul>
+    <% @artist.instruments.uniq().map do |instrument| %>
+      <li> <%= instrument.name %> </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -3,6 +3,12 @@ Today, you have been tasked with building out a Rails application for a music st
 
 The purpose of this application is to log the artists in the database with the instruments that they play. This music studio only works with the best of the best, so every one of their artists can play multiple instruments. But keep in mind that with popular instruments, there can be multiple artists playing them.
 
+Artist -< ArtistInstrument >- Instrument
+- name       - artist_id        - name
+- age        - instrument_id    - classification
+- title
+
+
 At this point, you should be considering the relationship between an `Artist` instance and an `Instrument` instance. How would an artist keep track of all the instruments that they play and how would you know about all the artists playing a specific instruments?
 
 Some parts of the application have already been built out for you and you should be able to run `rails db:migrate` and `rails db:seed`. However, consider how you might change the schema via migrations to build out the relationship as stated above.

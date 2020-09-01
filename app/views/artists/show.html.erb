@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row justify-content-center m-5">
+        <h1> <%= @artist.name %> and the instruments they play </h1>
+    </div>
+    <div class="row justify-content-center m-5">
+        <h2> Age: <%= @artist.age%> - Title: <%= @artist.title %> </h2>
+    </div>
+    <div class="row justify-content-center">
+            <ul class="list-group">
+                <% @artist.instruments.each do |instrument| %>
+                <li class="list-group-item"> <%= instrument.name %> </li>
+                <% end %>
+            </ul>
+    </div>
+</div>

@@ -1,9 +1,12 @@
 <h3>Create a new arrtist!</h3>
-<%if @artist.errors.full_messages.any?%>
-<% @artist.errors.full_messages.each do |message|%>
-<%= message %>
-<%end%>
-<%end%>
+
+
+<% if @errors %>
+  <% @errors.each do |error|%>
+    <p style= "color: red"> <%= error %></p>
+  <% end %>
+<% end %>
+
 <%= form_for @artist do |f|%>
 <%= f.label :name%>
 <%= f.text_field :name%><br>

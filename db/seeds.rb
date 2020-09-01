@@ -1,7 +1,13 @@
 #don't I need to write a pk sequence to destroy
 
-Instrument.destroy_all
+ArtistInstrument.destroy_all
 Artist.destroy_all
+Instrument.destroy_all
+
+ArtistInstrument.reset_pk_sequence
+Artist.reset_pk_sequence
+Instrument.reset_pk_sequence
+
 
 
 

@@ -4,7 +4,7 @@
 1. Run `rails db:migrate` and then `rails db:seed`.
 2. Create a new migration table for the joiner model.
 
-  Artist -----< Joiner >----- Instrument
+> Artist -----< Joiner >----- Instrument
 
 3. Run `rails db:seed` to migrate the new table and update the schema.
 4. Create the model, controller, and views for the new joiner model.
@@ -26,3 +26,16 @@ Now let's write the controller methods and routes.
 * In `app > controllers > joiners_controller.rb`, write the following methods: `new` and `create`. Make sure the `redirect_to` in the `create` method points to the artist's show page.
 * In `app > controllers > artists_controller.rb`, write the `show` method.
 * In `config > routes.rb`, write the routes for `artists#show`, `joiners#new`, and `joiners#create`.
+* In `app > views > artists`, create a new file called `show.html.erb`.
+
+> 2) In the artist's show page, I should be able to see the artist's age, title and name. I should also be able to see all the instruments that that specific artist plays.
+
+This second deliverable is more straightforward. It's asking us to populate the artist's show page with the relevant information.
+* In `app > views > artists > show.html.erb`, write the artist's attributes using the angry squid tags `<%=`.
+* Iterate through the artist's instruments and display them in an unordered list, using the `<ul>` tag.
+
+> 3) On the index page for an artist, there should be a list of all the artists' names. Clicking on one artist's name should take me to that artist's show page.
+
+> 4) There should be an index page for all the instruments, where the name of all the instruments should be listed out, alongside each of their classifications.
+
+> 5) I should also be able to save a new artist into the database. While it's possible for an artist to have the same name, an artist must have a name. An artist must also have an unique title. After successfully creating an artist, I should be taken to the artist's show page.

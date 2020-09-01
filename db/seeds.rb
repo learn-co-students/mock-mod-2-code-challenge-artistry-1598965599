@@ -1,3 +1,9 @@
+Artist.destroy_all
+Instrument.destroy_all
+
+Artist.reset_pk_sequence
+Instrument.reset_pk_sequence
+
 Artist.create(name: "Michael Jackson", age: rand(50), title: "King of Pop")
 Artist.create(name: "Stevie Wonder", age: rand(50), title: "Little Stevie Wonder")
 Artist.create(name: "Elvis Presley", age: rand(50), title: "the King")

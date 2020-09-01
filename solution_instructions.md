@@ -10,7 +10,7 @@
 4. Create the model, controller, and views for the new joiner model.
 5. Write the relationship macros for all 3 models.
 6. Add more seed data for the joiner model. Write `Model.destroy_all` at the top, so that your instances don't get duplicated when you run `rails db:seed`.
-7. Write the appropraite routes for all the models.
+7. Write the appropriate routes for all the models.
 8. Run `rails s` and navigate to `localhost:3000` in your browser to test out your app!
 
 ## Let's tackle the deliverables!

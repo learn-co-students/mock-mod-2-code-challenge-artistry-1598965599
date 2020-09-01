@@ -1,0 +1,20 @@
+<h1>Create a new album</h1>
+
+<% # <hr> %>
+
+<% # byebug %>
+<% # this is a comment %>
+
+<%= form_for(@album) do |f| %>
+  <%= f.label :artist %><br>
+  <%= f.collection_select :artist_id, Artist.all, :id, :name %><br>
+
+  <br>
+
+  <%= f.label :instrument %><br>
+  <%= f.collection_select :instrument_id, Instrument.all, :id, :name %><br>
+
+  <br>
+
+  <%= f.submit "Make Music!" %>
+<% end %>

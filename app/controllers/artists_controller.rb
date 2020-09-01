@@ -14,12 +14,11 @@ class ArtistsController < ApplicationController
     
     def create
         @artist = Artist.create(artist_param)
-        byebug 
-
+        
         if artist_param[:id]
             redirect_to artist_path(@artist)
         else
-           redirect_to new_artist_path
+            redirect_to new_artist_path
         end
     end
 
